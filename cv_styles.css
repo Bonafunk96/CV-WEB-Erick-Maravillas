@@ -444,6 +444,12 @@ footer h1 {
     align-items: flex-end;
     position: relative;
   }
+
+  .about-me {
+    position: relative;
+    left: 10px;
+  }
+
   .burgerMenu {
     display: block; /* Mostrar el ícono de hamburguesa en pantallas pequeñas */
   }
