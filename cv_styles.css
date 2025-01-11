@@ -1,0 +1,573 @@
+@font-face {
+  font-family: 'Buffalo'; /*nombre de la fuente*/
+  src: url('/fonts/Buffalo.ttf') format('truetype');
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 30%;
+  background-image: url('/images/blue-sky.jpg');
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.pdf-btn {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #fff176;
+  color: #3b3a3a; 
+  text-align: center;
+  text-decoration: none; 
+  border-radius: 5px; 
+  font-size: 14px;
+  transition: background-color 0.3s ease; 
+}
+
+.pdf-btn:hover {
+  background-color: #faad1b;
+  color: #1f1f1e;
+}
+
+.body-content {
+  /* background-color: #f0eae9; */
+  background-image: url('/images/bkgsea.jpg');
+}
+.nameCV {
+  align-content: center;
+  padding-left: 5%;
+  color: black;
+  font-size: 2rem;
+  transition: color 0.4s ease, text-shadow 0.4s ease; /*transicion suave*/
+}
+
+/*añadimos la clase moved con JS*/
+.nameCV.moved {
+  transform: translateY(-75px); /* Ajusta el valor según lo que necesites */
+  font-size: 15px;
+}
+
+.nameCV_link {
+  text-decoration: none;
+  transition: color 0.4s ease, text-shadow 0.4s ease; /*transicion suave*/
+}
+
+.nameCV:hover {
+  color: #f2edec;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /*sombra alrededor del link*/
+}
+
+.pictureHeader {
+  display: flex;
+  align-items: center;
+}
+
+.pictureHeader img {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navHeaderLinks a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-right: 10px;
+  transition: color 0.4s ease, text-shadow 0.4s ease; /*transicion suave*/
+  padding: 1.5rem;
+}
+
+.navHeaderLinks a:hover {
+  color: #f2edec;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /*sombra alrededor del link*/
+}
+
+.burgerMenu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* Ocultar en pantallas grandes */
+  position: relative;
+  bottom: 180px;
+  left: 160px;
+}
+
+/*<ul> styling 767-1023*/
+.nav-links-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links-container ul li {
+  margin: 0;
+}
+
+.nav-links-container ul li a {
+  display: block;
+  padding: 5px;
+  padding-right: 3rem;
+  text-decoration: none;
+}
+
+/*BODY SECTION*/
+.body-content {
+  padding: 20px 50px 20px 50px;
+}
+
+.about-me {
+  text-align: center;
+  /* font-family:"Libre Franklin", sans-serif; */
+  /* font-family: 'Posterable', sans-serif; */
+  padding: 20px 0 50px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-image: url('/images/clean_wood.jpg');
+  transition: border-color 0.9s, box-shadow 0.9s;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Sombra inicial */
+}
+
+.about-me:hover {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.9); /* Sombra final */
+  border-color: #444242;
+}
+
+.about-me h1{
+  font-family: 'Buffalo', sans-serif;
+  font-size: 5em;
+  letter-spacing: 0.3rem;
+}
+
+.about-me p {
+  font-size: 25px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.edusection {
+  display: flex;
+  padding: 20px 20px 0;
+}
+
+.education-school,
+.education-courses {
+    flex: 1; 
+    width: 50%; 
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    background-image: url('/images/clean_wood.jpg');
+    transition: border-color 0.9s, box-shadow 0.9s;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Sombra inicial */
+}
+
+.education-school:hover,
+.education-courses:hover {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 1); /* Sombra final */
+  border-color: #444242;
+}
+
+.education-school h1,
+.education-courses h1 {
+  text-align: center;
+  font-family: 'Buffalo', sans-serif;
+  font-size: 3em;
+  letter-spacing: 0.3rem;
+}
+
+.education-school ul,
+.education-courses ul {
+  list-style-position: inside;
+  font-family:"Libre Franklin", sans-serif;
+  font-size: 20px;
+  padding-left: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.education-courses ul {
+  margin-top: 50px;
+}
+
+.education-school li,
+.education-courses li {
+  padding-bottom: 2rem;
+}
+
+.skills {
+  padding: 0 20px 20px;
+}
+
+.skills-n-lang {
+  display: flex;
+}
+
+.skills-container,
+.languages {
+    flex: 1; 
+    width: 50%; 
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    background-image: url('/images/clean_wood.jpg');
+    transition: border-color 0.9s, box-shadow 0.9s;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Sombra inicial */
+}
+
+.skills-container:hover,
+.languages:hover {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 1); /* Sombra final */
+  border-color: #444242;
+}
+
+.skills-container h1,
+.languages h1{
+  max-width: auto;
+  text-align: center;
+  font-family: 'Buffalo', sans-serif;
+  font-size: 3em;
+  letter-spacing: 0.3rem;
+}
+
+.languages p {
+  font-size: 20px;
+  font-family:"Libre Franklin", sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skills-list {
+  display: flex;
+}
+
+.skills-list ul {
+  flex: 1; 
+  width: 50%; 
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  list-style-type: none;
+  font-family:"Libre Franklin", sans-serif;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skills-container li {
+  padding-bottom: 1rem;
+}
+
+.lang-articles {
+  display: flex;
+  text-align: center;
+}
+
+.spa-lang,
+.eng-lang {
+    flex: 1; 
+    width: 50%; 
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* JOB EXPERIENCE STYLING*/
+#job-experience {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-image: url('/images/clean_wood.jpg');
+  transition: border-color 0.9s, box-shadow 0.9s;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Sombra inicial */
+}
+
+#job-experience:hover {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 1); /* Sombra final */
+  border-color: #444242;
+}
+
+#job-experience h1 {
+  font-family: 'Buffalo', sans-serif;
+  font-size: 3em;
+  letter-spacing: 0.3rem;
+}
+
+#job-experience ul {
+  list-style-position: inside;
+  font-family:"Libre Franklin", sans-serif;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.q4-job,
+.kenisIT-job,
+.towanda-job {
+  margin-bottom: 50px;
+}
+
+.comcast-job {
+  margin-bottom: 30px;
+}
+
+.q4-job a,
+.kenisIT-job a,
+.towanda-job a,
+.comcast-job a {
+  color: inherit; /* Hereda el color del texto del elemento padre */
+  text-decoration: none; /* Quita el subrayado */
+}
+
+.q4-job a:hover,
+.kenisIT-job a:hover,
+.towanda-job a:hover,
+.comcast-job a:hover {
+  text-decoration: underline; /* Agrega subrayado al hacer hover */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Agrega sombra al texto */
+  transition: all 0.3s ease; /* Suaviza la transición de los efectos */
+  color: #182fd3;
+}
+
+
+/*FOOTER STYLING*/
+footer {
+  max-width: 100vw;
+  min-height: 30%;
+  padding: 50px 0 100px 0;
+  position: relative;
+  background-color: #fae9c3;
+
+}
+
+footer p {
+  font-size: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.footer-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  text-decoration: underline; /* Agrega subrayado al hacer hover */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Agrega sombra al texto */
+  transition: all 0.3s ease; /* Suaviza la transición de los efectos */
+  color: #182fd3;
+}
+
+.footer-container img {
+  position: relative;
+  top: 10px;
+  margin-right: 5px;
+}
+
+footer h1 {
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+.copyright {
+  text-align: center; /* Centra el texto */
+  color: #666; /* Color de texto gris */
+  width: 100%; /* Asegura que cubra todo el ancho del footer */
+  padding: 5px 0; /* Espacio interno arriba y abajo */
+  position: absolute;
+  bottom: 0;
+}
+
+.copyright p {
+  font-size: 12px;
+}
+
+.back-top {
+  display: flex;
+  justify-content: center;
+}
+
+.back-to-top {
+  display: flex;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #FAE9C4;
+}
+
+.back-to-top img {
+  width: 130px;
+}
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 429px) {
+  .education-n-courses h1,
+  .skills h1,
+  #job-experience h1,
+  .about-me h1 {
+    font-size: 2.3em;
+  }
+
+  .about-me p {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+  }
+  .navHeaderLinks {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+  }
+  .burgerMenu {
+    display: block; /* Mostrar el ícono de hamburguesa en pantallas pequeñas */
+  }
+  .nameCV {
+    align-content: center;
+    padding-left: 5%;
+    color: black;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease; /* Para animar el movimiento */
+  }
+  .nav-links-container {
+    display: none; /* Ocultar enlaces por defecto */
+    flex-direction: column;
+    background-color: #f8f2f2;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+    border-radius: 8px;
+  }
+  .nav-links-container a {
+    display: block;
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid #444;
+    font-size: 1rem;
+  }
+  .nav-links-container a:last-child {
+    border-bottom: none;
+  }
+
+  .mostrar {
+    display: flex; /* Mostrar enlaces al hacer clic en la hamburguesa */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-links-container ul {
+    position: relative;
+    left: 2rem;
+  }
+}
+
+@media (width: 1024px) {
+  .navHeaderLinks a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    padding-right: 10px;
+    transition: color 0.4s ease, text-shadow 0.4s ease; /*transicion suave*/
+    padding: 10px;
+  }
+  .nameCV {
+    align-content: center;
+    padding-left: 5%;
+    color: black;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease; /* Para animar el movimiento */
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1592px) {
+  .navHeaderLinks a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    padding-right: 10px;
+    transition: color 0.4s ease, text-shadow 0.4s ease; /*transicion suave*/
+    padding: 5px;
+  }
+  .nameCV {
+    align-content: center;
+    padding-left: 5%;
+    color: black;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease; /* Para animar el movimiento */
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .footer-container {
+    display: flow;
+  }
+}
+
+@media (max-width:767px) {
+  /* .about-me h1 {
+    font-size: 3.5em;
+  } */
+
+  .about-me p {
+    padding: 10px;
+  }
+
+  .edusection {
+    display: block;
+  }
+
+  .education-school,
+  .education-courses {
+    width: 100%;
+  }
+
+  .skills-n-lang {
+    display: block;
+  }
+
+  .skills-container,
+  .languages {
+    width: 100%;
+  }
+
+  .skills-list ul {
+    padding: 0px;
+  }
+
+  #job-experience ul {
+    padding-left: 0px;
+  }
+
+  #job-experience li {
+    padding: 20px;
+  }
+}
