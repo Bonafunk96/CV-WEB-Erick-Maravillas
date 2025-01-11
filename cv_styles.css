@@ -483,6 +483,7 @@ footer h1 {
 
   .mostrar {
     display: flex; /* Mostrar enlaces al hacer clic en la hamburguesa */
+    margin-top: 10px;
   }
 
   #job-experience {
