@@ -65,6 +65,13 @@ function toggleMenu() {
   } else {
     nameCV.classList.remove("moved"); // Regresar a la posición original
   }
+  const links = document.querySelectorAll(".nav-link");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("mostrar");
+      nameCV.classList.remove("moved"); // Regresa el título a su posición
+    });
+  });
 }
 
 // Función para verificar el tamaño de la pantalla
