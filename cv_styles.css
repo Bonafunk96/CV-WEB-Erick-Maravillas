@@ -484,6 +484,11 @@ footer h1 {
   .mostrar {
     display: flex; /* Mostrar enlaces al hacer clic en la hamburguesa */
   }
+
+  #job-experience {
+    position: relative;
+    left: 8px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
