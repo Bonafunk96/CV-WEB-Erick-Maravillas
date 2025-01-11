@@ -507,7 +507,7 @@ footer h1 {
     text-decoration: none;
     color: black;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 22px;
     padding-right: 10px;
     transition: color 0.4s ease, text-shadow 0.4s ease; /*transicion suave*/
     padding: 10px;
@@ -526,10 +526,11 @@ footer h1 {
     text-decoration: none;
     color: black;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 22px;
     padding-right: 10px;
     transition: color 0.4s ease, text-shadow 0.4s ease; /*transicion suave*/
     padding: 5px;
+    display: block;
   }
   .nameCV {
     align-content: center;
@@ -537,6 +538,19 @@ footer h1 {
     color: black;
     font-size: 1.5rem;
     transition: transform 0.3s ease; /* Para animar el movimiento */
+    width: max-content;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .nameCV {
+    width: max-content;
+  }
+}
+
+@media (min-width: 2560px) {
+  .nameCV {
+    width: max-content;
   }
 }
 
